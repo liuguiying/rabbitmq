@@ -1,0 +1,4 @@
+/META-INF/
+
+#compiled class files
+*.class
