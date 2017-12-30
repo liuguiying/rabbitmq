@@ -31,6 +31,8 @@ public class RoutingSendDirect {
         	String message = "Send the message level:" + severity;
         	channel.basicPublish(EXCHANGE_NAME, severity, null, message.getBytes());
         	System.out.println(" [x] Sent '" + severity + "':'" + message + "'");
+//        	System.out.println("i am p");
+      
         }
         channel.close();
         connection.close();

@@ -24,7 +24,7 @@ public class ReceiveLogsTopic1 {
 		channel.exchangeDeclare(EXCHANGE_NAME, "topic");
 		String queueName = channel.queueDeclare().getQueue();
 		// 路由关键字
-		String[] routingKeys = new String[]{"*.orange.*"};
+		String[] routingKeys = new String[]{"*.orange.*","#.*"};
 //		绑定路由关键字
 		for (String bindingKey : routingKeys) {
 			channel.queueBind(queueName, EXCHANGE_NAME, bindingKey);

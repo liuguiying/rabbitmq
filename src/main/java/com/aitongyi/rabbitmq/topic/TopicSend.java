@@ -35,7 +35,9 @@ public class TopicSend {
 												"lazy.brown.fox", 
 												"quick.brown.fox", 
 												"quick.orange.male.rabbit", 
-												"lazy.orange.male.rabbit"};
+												"lazy.orange.male.rabbit",
+												".hi",
+												".."};
 //			·¢ËÍÏûÏ¢
 	        for(String severity :routingKeys){
 	        	String message = "From "+severity+" routingKey' s message!";

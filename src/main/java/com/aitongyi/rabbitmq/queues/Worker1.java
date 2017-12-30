@@ -29,10 +29,14 @@ public class Worker1 {
 
 				System.out.println("Worker1 [x] Received '" + message + "'");
 				try {
+					System.out.println("Worker1 [x] Received '" + message + "'");
 					doWork(message);
+					System.out.println("Worker1 [x] Received '" + message + "'");
 				} finally {
 					System.out.println("Worker1 [x] Done");
+					System.out.println("Worker1 [x] Done");
 					// 消息处理完成确认
+					System.out.println("basicACK 这个方法调用了没有呢？");
 					channel.basicAck(envelope.getDeliveryTag(), false);
 				}
 			}
@@ -43,7 +47,9 @@ public class Worker1 {
 
 	private static void doWork(String task) {
 		try {
-			Thread.sleep(1000); // 暂停1秒钟
+			System.out.println("休眠5秒钟开始");
+			Thread.sleep(5000); // 暂停1秒钟
+			System.out.println("休眠5秒钟结束");
 		} catch (InterruptedException _ignored) {
 			Thread.currentThread().interrupt();
 		}

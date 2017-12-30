@@ -28,6 +28,7 @@ public class Worker2 {
 
 				System.out.println("Worker2 [x] Received '" + message + "'");
 				try {
+					System.out.println("这个方法调用了没有啊？！");
 					doWork(message);
 				} finally {
 					System.out.println("Worker2 [x] Done");
@@ -48,7 +49,8 @@ public class Worker2 {
 	 */
 	private static void doWork(String task) {
 		try {
-			Thread.sleep(1000); // 暂停1秒钟
+			System.out.println("休眠5秒钟结束");
+			Thread.sleep(5000); // 暂停1秒钟
 		} catch (InterruptedException _ignored) {
 			Thread.currentThread().interrupt();
 		}

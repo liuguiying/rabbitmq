@@ -31,6 +31,7 @@ public class EmitLog {
 			String message = "Hello World! " + i;
 			 channel.basicPublish(EXCHANGE_NAME, "", null, message.getBytes());
 		     System.out.println(" [x] Sent '" + message + "'");
+		     System.out.println(i);
 		}
         channel.close();
         connection.close();
